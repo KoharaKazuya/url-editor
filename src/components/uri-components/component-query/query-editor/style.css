@@ -1,0 +1,22 @@
+.entry {
+  display: flex;
+}
+
+.key {
+  flex: 0 0 auto;
+  width: 104px;
+  text-align: right;
+}
+
+.value {
+  flex: 1 1 auto;
+}
+
+.remove-button {
+  padding: 8px;
+}
+
+.append-button {
+  width: 100%;
+  padding: 8px;
+}

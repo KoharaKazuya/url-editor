@@ -1,0 +1,16 @@
+.field {
+  width: 100%;
+  display: flex;
+}
+
+.label {
+  flex: 0 0 auto;
+  width: 104px;
+  border: solid 2px transparent;
+  padding: 8px;
+  text-align: right;
+}
+
+.input {
+  flex: 1 1 auto;
+}

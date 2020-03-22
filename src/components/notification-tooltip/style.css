@@ -1,0 +1,18 @@
+.tooltip {
+  position: absolute;
+  background: var(--color-reversed-background);
+  color: var(--color-reversed-text);
+  border-radius: 4px;
+  padding: 8px;
+}
+.tooltip::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 16px;
+  bottom: 100%;
+  width: 16px;
+  height: 16px;
+  border: solid 8px transparent;
+  border-bottom-color: var(--color-reversed-background);
+}

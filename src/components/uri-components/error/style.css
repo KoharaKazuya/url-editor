@@ -1,0 +1,17 @@
+.card {
+  background: var(--color-error-background);
+  color: var(--color-error-text);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.title {
+  background: var(--color-error-header-background);
+  color: var(--color-error-header-text);
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.message {
+  padding: 16px;
+}
