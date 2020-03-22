@@ -1,0 +1,78 @@
+@import-sanitize;
+
+:-moz-focusring {
+  outline: none;
+}
+
+:root {
+  --color-base-text: #444;
+  --color-reversed-text: #fff;
+  --color-base-background: #fafafa;
+  --color-section-background: #fff;
+  --color-reversed-background: #333;
+  --color-action-button-icon: #666;
+  --color-action-button-icon-active: #000;
+  --color-action-button-icon-disabled: #ccc;
+  --color-base-outline: #666;
+  --color-weak-outline: #ccc;
+  --color-focus-outline: #66c;
+  --color-footer-text: #ccc;
+  --color-footer-background: #333;
+  --color-error-text: #900;
+  --color-error-header-text: #fff;
+  --color-error-background: #fcc;
+  --color-error-header-background: #900;
+  --color-notificator-text: #fff;
+  --color-notificator-background: #66c;
+  /* component colors: `hsl((180 + 360/8) * n % 360, 80%, 30%)` */
+  --color-component-scheme: hsl(90, 80%, 30%);
+  --color-component-userinfo: hsl(315, 80%, 30%);
+  --color-component-host: hsl(180, 80%, 30%);
+  --color-component-port: hsl(45, 80%, 30%);
+  --color-component-path: hsl(270, 80%, 30%);
+  --color-component-query: hsl(135, 80%, 30%);
+  --color-component-fragment: hsl(0, 80%, 30%);
+  --color-component-reserved: hsl(225, 80%, 30%);
+  --color-component-other: hsl(0, 0%, 30%);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base-text: #ccc;
+    --color-reversed-text: #000;
+    --color-base-background: #111;
+    --color-section-background: #000;
+    --color-reversed-background: #ccc;
+    --color-action-button-icon: #ccc;
+    --color-action-button-icon-active: #fff;
+    --color-action-button-icon-disabled: #666;
+    --color-base-outline: #666;
+    --color-weak-outline: #333;
+    --color-error-text: #c66;
+    --color-error-background: #300;
+    --color-error-header-text: #ccc;
+    --color-error-header-background: #600;
+    /* component colors: `hsl((180 + 360/8) * n % 360, 80%, 70%)` */
+    --color-component-scheme: hsl(90, 80%, 70%);
+    --color-component-userinfo: hsl(315, 80%, 70%);
+    --color-component-host: hsl(180, 80%, 70%);
+    --color-component-port: hsl(45, 80%, 70%);
+    --color-component-path: hsl(270, 80%, 70%);
+    --color-component-query: hsl(135, 80%, 70%);
+    --color-component-fragment: hsl(0, 80%, 70%);
+    --color-component-reserved: hsl(225, 80%, 70%);
+    --color-component-other: hsl(0, 0%, 70%);
+  }
+}
+
+html {
+  font-family: system-ui, -apple-system, "Hiragino Sans", "Yu Gothic UI",
+    sans-serif;
+  background: var(--color-base-background);
+  color: var(--color-base-text);
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}

@@ -1,0 +1,37 @@
+.label {
+  cursor: pointer;
+  position: relative;
+  padding: 4px 0;
+}
+.label.checked::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  top: 11px;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+  background: var(--color-focus-outline);
+  border-radius: 2px;
+}
+
+.input {
+  appearance: none;
+  outline: none;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 8px 0 0;
+  border: solid 2px var(--color-weak-outline);
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.input:active,
+.input:focus {
+  border-color: var(--color-focus-outline);
+}
+
+.text {
+  vertical-align: middle;
+}

@@ -1,0 +1,18 @@
+.button {
+  appearance: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  color: var(--color-action-button-icon);
+  cursor: pointer;
+  border: solid 2px transparent;
+}
+.button:focus {
+  border-color: var(--color-focus-outline);
+}
+.button:active {
+  color: var(--color-action-button-icon-active);
+}
+.button:disabled {
+  color: var(--color-action-button-icon-disabled);
+}

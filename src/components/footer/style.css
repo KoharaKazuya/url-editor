@@ -1,0 +1,17 @@
+.footer {
+  padding: 8px;
+  background: var(--color-footer-background);
+  color: var(--color-footer-text);
+  text-align: center;
+}
+
+.field {
+  margin: 16px;
+}
+
+.link {
+  color: var(--color-footer-text);
+}
+.link:focus {
+  outline: var(--color-focus-outline) solid 2px;
+}

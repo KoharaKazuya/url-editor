@@ -1,0 +1,19 @@
+{
+  "name": "URL Editor",
+  "description": "Edit URLs graphically at component level or whole string",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fafafa",
+  "theme_color": "#66c",
+  "icons": [
+    {
+      "src": "/assets/icons/link-192x192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/icons/link-512x512.png",
+      "sizes": "512x512"
+    }
+  ]
+}

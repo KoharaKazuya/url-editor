@@ -1,0 +1,53 @@
+.container {
+  position: relative;
+}
+
+.box {
+  min-height: 42px;
+  background: var(--color-section-background);
+  border: solid 1px var(--color-base-outline);
+  border-radius: 4px;
+  outline: none;
+  padding: 8px 89px 8px 16px;
+  margin-bottom: 32px;
+}
+.box:focus {
+  border: solid 2px var(--color-focus-outline);
+  padding: 7px 89px 7px 15px;
+}
+
+.visit-button,
+.visit-link {
+  position: absolute;
+  top: 1px;
+  right: 41px;
+  width: 40px;
+  height: calc(100% - 2px);
+}
+
+.visit-link {
+  font-size: 16px;
+  color: var(--color-action-button-icon);
+  border: solid 2px transparent;
+  outline: none;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.visit-link:focus {
+  border-color: var(--color-focus-outline);
+}
+.visit-link:active {
+  color: var(--color-action-button-icon-active);
+}
+
+.copy-button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 40px;
+  height: calc(100% - 2px);
+  padding: 0;
+}

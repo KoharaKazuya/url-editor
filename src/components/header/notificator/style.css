@@ -1,0 +1,17 @@
+.container {
+  height: 24px;
+}
+
+.notificator {
+  line-height: 24px;
+  text-align: center;
+  color: var(--color-notificator-text);
+  background: var(--color-notificator-background);
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.2s ease-out;
+  transform: translate(0, -100%);
+}
+.notificator.active {
+  transform: translate(0, 0);
+}

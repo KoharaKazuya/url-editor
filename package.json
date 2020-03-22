@@ -1,0 +1,106 @@
+{
+  "name": "url-editor",
+  "description": "Edit URLs graphically at component level or whole string",
+  "version": "0.0.0",
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "last 2 safari versions",
+    "last 2 edge versions",
+    "last 2 ios versions",
+    "last 2 android versions"
+  ],
+  "dependencies": {
+    "clipboard-polyfill": "^2.8.6",
+    "preact": "^10.3.1",
+    "preact-render-to-string": "^5.1.4",
+    "uri-js": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/webpack-env": "^1.15.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "css-loader": "^1.0.1",
+    "cypress": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "postcss-normalize": "^8.0.1",
+    "preact-cli": "^3.0.0-next.19",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5",
+    "typings-for-css-modules-loader": "^1.7.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-use-before-define": [
+        "error",
+        {
+          "functions": false
+        }
+      ],
+      "react/no-unknown-property": [
+        "error",
+        {
+          "ignore": [
+            "class"
+          ]
+        }
+      ],
+      "react/prop-types": "off"
+    },
+    "settings": {
+      "react": {
+        "pragma": "h",
+        "version": "16.12"
+      }
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.js"
+        ],
+        "rules": {
+          "@typescript-eslint/explicit-function-return-type": "off"
+        }
+      }
+    ]
+  },
+  "license": "MIT",
+  "postcss": {
+    "plugins": {
+      "postcss-normalize": {},
+      "autoprefixer": {}
+    }
+  },
+  "private": true,
+  "scripts": {
+    "build": "preact build",
+    "cy:open": "cypress open",
+    "cy:run:chrome": "cypress run --headless --browser chrome",
+    "cy:run:firefox": "cypress run --headless --browser firefox",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "start": "preact watch",
+    "test": "npm run cy:run:chrome && npm run cy:run:firefox"
+  }
+}

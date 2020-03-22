@@ -1,0 +1,5 @@
+node_modules
+/build
+/*.log
+/cypress/videos
+/cypress/screenshots

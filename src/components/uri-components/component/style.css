@@ -1,0 +1,89 @@
+.component {
+  background: var(--color-section-background);
+  margin: 16px auto;
+  border: solid 1px var(--color-base-outline);
+  border-radius: 4px;
+}
+
+.component-header {
+  display: flex;
+  align-items: stretch;
+  position: relative; /* for <CopyNotificator /> */
+}
+
+.type {
+  flex: 0 0 auto;
+  width: 120px;
+  padding: 8px 8px 8px 16px;
+  color: var(--color-reversed-text);
+  text-align: right;
+}
+
+.value {
+  flex: 1 1 auto;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.copy-button {
+  flex: 0 0 auto;
+  padding: 8px 16px;
+}
+
+.component-content {
+  border-top: solid 1px var(--color-base-outline);
+}
+
+.component-detail {
+  transition: max-height 0.2s ease-in-out;
+  max-height: 0;
+
+  overflow: hidden;
+  visibility: hidden;
+  animation: collapsing 0.203s forwards;
+}
+.component-detail.expansion {
+  max-height: 50vh;
+  animation: expanding 0.203s forwards;
+}
+@keyframes collapsing {
+  0% {
+    overflow: auto;
+    visibility: visible;
+  }
+  1% {
+    overflow: hidden;
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+@keyframes expanding {
+  0% {
+    overflow: hidden;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: auto;
+    visibility: visible;
+  }
+}
+
+.component-detail-wrapper {
+  padding: 8px 16px;
+}
+
+.expand-button {
+  padding: 0;
+  width: 100%;
+}
