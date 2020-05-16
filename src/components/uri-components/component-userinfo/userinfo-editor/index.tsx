@@ -35,14 +35,14 @@ function useUserAndPasswordState(
   onInput: ((value: string) => void) | undefined
 ) {
   const [user, password] = [
-    ...value.split(":").map(x => {
+    ...value.split(":").map((x) => {
       try {
         return decodeURIComponent(x);
       } catch {
         return x;
       }
     }),
-    ""
+    "",
   ];
 
   const setUser = useCallback(

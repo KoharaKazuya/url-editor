@@ -87,12 +87,12 @@ function useCopy(uri: string) {
       .writeText(uri)
       .then(() => {
         const id = Math.random();
-        setShows(state => [...state, id]);
+        setShows((state) => [...state, id]);
         setTimeout(() => {
-          setShows(state => state.filter(s => s !== id));
+          setShows((state) => state.filter((s) => s !== id));
         }, 1000);
       })
-      .catch(e => {
+      .catch((e) => {
         console.error(e);
         alert(e);
       });
@@ -106,10 +106,10 @@ function usePaste(setUri: (raw: string) => void) {
   return useCallback(() => {
     navigator.clipboard
       .readText()
-      .then(text => {
+      .then((text) => {
         setUri(text);
       })
-      .catch(e => {
+      .catch((e) => {
         console.error(e);
         alert(e);
       });

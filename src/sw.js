@@ -1,6 +1,6 @@
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 
-const isNav = event => event.request.mode === "navigate";
+const isNav = (event) => event.request.mode === "navigate";
 
 /**
  * Adding this before `precacheAndRoute` lets us handle all
@@ -14,9 +14,9 @@ workbox.routing.registerRoute(
     networkTimeoutSeconds: 5, // if u dont start getting headers within 5 sec fallback to cache.
     plugins: [
       new workbox.cacheableResponse.Plugin({
-        statuses: [200] // only cache valid responses, not opaque responses e.g. wifi portal.
-      })
-    ]
+        statuses: [200], // only cache valid responses, not opaque responses e.g. wifi portal.
+      }),
+    ],
   })
 );
 

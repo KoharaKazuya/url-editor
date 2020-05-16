@@ -11,10 +11,10 @@ type Props = {
 const InputCheckbox: FunctionalComponent<Props> = ({
   label,
   checked,
-  onChange: outerOnChange
+  onChange: outerOnChange,
 }) => {
   const onChange: JSX.GenericEventHandler<HTMLInputElement> = useCallback(
-    event => {
+    (event) => {
       if (outerOnChange) outerOnChange(event.currentTarget.checked);
     },
     [outerOnChange]

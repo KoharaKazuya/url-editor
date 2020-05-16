@@ -24,16 +24,16 @@
   --color-error-header-background: #900;
   --color-notificator-text: #fff;
   --color-notificator-background: #66c;
-  /* component colors: `hsl((180 + 360/8) * n % 360, 80%, 30%)` */
-  --color-component-scheme: hsl(90, 80%, 30%);
-  --color-component-userinfo: hsl(315, 80%, 30%);
-  --color-component-host: hsl(180, 80%, 30%);
-  --color-component-port: hsl(45, 80%, 30%);
-  --color-component-path: hsl(270, 80%, 30%);
-  --color-component-query: hsl(135, 80%, 30%);
-  --color-component-fragment: hsl(0, 80%, 30%);
-  --color-component-reserved: hsl(225, 80%, 30%);
-  --color-component-other: hsl(0, 0%, 30%);
+  /* component colors: `lch(40% 60 ((180+360/8) * n % 360))` */
+  --color-component-scheme: rgb(0.56%, 43.23%, 2.06%); /* n=7 */
+  --color-component-userinfo: rgb(69.03%, 11.22%, 38.09%); /* n=0 */
+  --color-component-host: rgb(0%, 40.89%, 49.56%); /* n=1 */
+  --color-component-port: rgb(42.6%, 36.53%, 0%); /* n=2 */
+  --color-component-path: rgb(52.19%, 25.34%, 64.69%); /* n=3 */
+  --color-component-query: rgb(0%, 42.04%, 36.54%); /* n=4 */
+  --color-component-fragment: rgb(63.64%, 23.09%, 9.92%); /* n=5 */
+  --color-component-reserved: rgb(0%, 38.14%, 69.06%); /* n=6 */
+  --color-component-other: rgb(36.95%, 36.95%, 36.95%); /* `lch(40% 0 0)` */
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -51,16 +51,16 @@
     --color-error-background: #300;
     --color-error-header-text: #ccc;
     --color-error-header-background: #600;
-    /* component colors: `hsl((180 + 360/8) * n % 360, 80%, 70%)` */
-    --color-component-scheme: hsl(90, 80%, 70%);
-    --color-component-userinfo: hsl(315, 80%, 70%);
-    --color-component-host: hsl(180, 80%, 70%);
-    --color-component-port: hsl(45, 80%, 70%);
-    --color-component-path: hsl(270, 80%, 70%);
-    --color-component-query: hsl(135, 80%, 70%);
-    --color-component-fragment: hsl(0, 80%, 70%);
-    --color-component-reserved: hsl(225, 80%, 70%);
-    --color-component-other: hsl(0, 0%, 70%);
+    /* component colors: `lch(50% 60 ((180+360/8) * n % 360))` */
+    --color-component-scheme: rgb(17.79%, 53.42%, 14.46%); /* n=7 */
+    --color-component-userinfo: rgb(80.7%, 24.62%, 47.78%); /* n=0 */
+    --color-component-host: rgb(0%, 51.47%, 62.11%); /* n=1 */
+    --color-component-port: rgb(53.56%, 46.11%, 0%); /* n=2 */
+    --color-component-path: rgb(62.93%, 35.31%, 75.47%); /* n=3 */
+    --color-component-query: rgb(0%, 52.88%, 46.13%); /* n=4 */
+    --color-component-fragment: rgb(75.37%, 33.26%, 18.94%); /* n=5 */
+    --color-component-reserved: rgb(0%, 48.09%, 86.06%); /* n=6 */
+    --color-component-other: rgb(46.63%, 46.63%, 46.63%); /* `lch(50% 0 0)` */
   }
 }
 

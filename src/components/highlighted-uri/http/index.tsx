@@ -9,7 +9,7 @@ const componentKeys = [
   "port",
   "path",
   "query",
-  "fragment"
+  "fragment",
 ] as const;
 
 type Props = {

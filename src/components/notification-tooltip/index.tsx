@@ -7,7 +7,7 @@ type Props = {
 
 const NotificationTooltip: FunctionalComponent<Props> = ({
   class: additionalClass,
-  children
+  children,
 }) => <div class={`${style.tooltip} ${additionalClass || ""}`}>{children}</div>;
 
 export default NotificationTooltip;

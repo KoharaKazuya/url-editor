@@ -12,7 +12,7 @@ const componentKeys = [
   "port",
   "path",
   "query",
-  "fragment"
+  "fragment",
 ];
 
 type Props = {
@@ -92,12 +92,12 @@ function useCopy(value: string) {
       .writeText(value)
       .then(() => {
         const id = Math.random();
-        setShows(state => [...state, id]);
+        setShows((state) => [...state, id]);
         setTimeout(() => {
-          setShows(state => state.filter(s => s !== id));
+          setShows((state) => state.filter((s) => s !== id));
         }, 1000);
       })
-      .catch(e => {
+      .catch((e) => {
         console.error(e);
         alert(e);
       });

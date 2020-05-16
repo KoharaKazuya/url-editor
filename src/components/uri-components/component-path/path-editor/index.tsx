@@ -56,11 +56,11 @@ const PathEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
             <InputText
               value={entry}
               class={style.entryInput}
-              onInput={text => {
+              onInput={(text) => {
                 const newEntries = [
                   ...entries.slice(0, index),
                   text,
-                  ...entries.slice(index + 1)
+                  ...entries.slice(index + 1),
                 ];
                 replaceEntries(() => newEntries);
               }}
@@ -72,7 +72,7 @@ const PathEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
               onClick={() => {
                 const newEntries = [
                   ...entries.slice(0, index),
-                  ...entries.slice(index + 1)
+                  ...entries.slice(index + 1),
                 ];
                 replaceEntries(() => newEntries);
               }}
@@ -109,7 +109,7 @@ function destructEntries(value: string | undefined) {
     remain = remain.slice(0, remain.length - 1);
   }
 
-  const entries = remain.split("/").map(entry => {
+  const entries = remain.split("/").map((entry) => {
     try {
       return decodeURIComponent(entry);
     } catch {
@@ -126,7 +126,7 @@ function useConstructEntries(onInput: ((value: string) => void) | undefined) {
       if (!onInput) return;
       let s = "";
       if (leadingSlash) s += "/";
-      s += entries.map(entry => encodeURIComponent(entry)).join("/");
+      s += entries.map((entry) => encodeURIComponent(entry)).join("/");
       if (trailingSlash) s += "/";
       onInput(s);
     },
@@ -166,19 +166,19 @@ function useOnSort(
   return useCallback(
     (index: number, move: number) => {
       if (move === 0) return;
-      replaceEntries(entries =>
+      replaceEntries((entries) =>
         move < 0
           ? [
               ...entries.slice(0, index + move),
               entries[index],
               ...entries.slice(index + move, index),
-              ...entries.slice(index + 1)
+              ...entries.slice(index + 1),
             ]
           : [
               ...entries.slice(0, index),
               ...entries.slice(index + 1, index + move + 1),
               entries[index],
-              ...entries.slice(index + move + 1)
+              ...entries.slice(index + move + 1),
             ]
       );
     },

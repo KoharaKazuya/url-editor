@@ -23,12 +23,12 @@ const QueryEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
           <InputText
             class={style.key}
             value={k}
-            onInput={newKey => {
+            onInput={(newKey) => {
               if (!onInput) return;
               const newQuery = [
                 ...query.slice(0, index),
                 [newKey, query[index][1]] as [string, string],
-                ...query.slice(index + 1)
+                ...query.slice(index + 1),
               ];
               onInput(serializeQuery(newQuery));
             }}
@@ -36,12 +36,12 @@ const QueryEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
           <InputText
             class={style.value}
             value={v}
-            onInput={newValue => {
+            onInput={(newValue) => {
               if (!onInput) return;
               const newQuery = [
                 ...query.slice(0, index),
                 [query[index][0], newValue] as [string, string],
-                ...query.slice(index + 1)
+                ...query.slice(index + 1),
               ];
               onInput(serializeQuery(newQuery));
             }}
@@ -54,7 +54,7 @@ const QueryEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
               if (!onInput) return;
               const newQuery = [
                 ...query.slice(0, index),
-                ...query.slice(index + 1)
+                ...query.slice(index + 1),
               ];
               onInput(serializeQuery(newQuery));
             }}
@@ -86,8 +86,8 @@ function serializeQuery(query: Query): string {
 function deserializeQuery(query: string): Query {
   return query
     .split("&")
-    .map(entry =>
-      entry.split("=").map(x => {
+    .map((entry) =>
+      entry.split("=").map((x) => {
         try {
           return decodeURIComponent(x);
         } catch {
