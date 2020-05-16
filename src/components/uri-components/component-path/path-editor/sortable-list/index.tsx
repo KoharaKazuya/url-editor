@@ -11,7 +11,7 @@ const SortableList: FunctionalComponent<Props> = ({ onSort, children }) => {
   const onPointerDown = useOnPointerDown(onSort);
   return (
     <div>
-      {items.map(item => (
+      {items.map((item) => (
         // eslint-disable-next-line react/jsx-key
         <div class={style.container}>
           <div

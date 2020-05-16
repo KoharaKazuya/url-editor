@@ -14,7 +14,7 @@ const ActionButton: FunctionalComponent<Props> = ({
   icon,
   class: additionalClass,
   onClick,
-  disabled
+  disabled,
 }) => (
   <button
     type="button"

@@ -11,7 +11,7 @@ type Props = {
 
 const ComponentHost: FunctionalComponent<Props> = ({
   value: encodedValue,
-  onInput: outerOnInput
+  onInput: outerOnInput,
 }) => {
   const [value, onInput] = useOnInput(encodedValue, outerOnInput);
   return (

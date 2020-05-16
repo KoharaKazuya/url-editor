@@ -6,7 +6,7 @@ import { useHasMounted } from "./prerender";
 const initialValue = {
   raw: "",
   parsed: parse(""),
-  setRaw: (() => undefined) as (raw: string) => void
+  setRaw: (() => undefined) as (raw: string) => void,
 };
 
 const UriContext = createContext(initialValue);

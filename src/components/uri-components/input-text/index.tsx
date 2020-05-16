@@ -11,10 +11,10 @@ type Props = {
 const InputText: FunctionalComponent<Props> = ({
   value,
   onInput: outerOnInput,
-  class: additionalClass
+  class: additionalClass,
 }) => {
   const onInput: JSX.GenericEventHandler<HTMLInputElement> = useCallback(
-    event => {
+    (event) => {
       const v = event.currentTarget.value;
       if (outerOnInput) outerOnInput(v);
     },
