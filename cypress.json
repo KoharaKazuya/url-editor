@@ -1,3 +1,4 @@
 {
-  "fileServerFolder": "build"
+  "fileServerFolder": "build",
+  "retries": 2
 }
