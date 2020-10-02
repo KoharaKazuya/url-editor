@@ -35,7 +35,7 @@ const UriInputBox: FunctionalComponent = () => {
           href={uri}
           target="_blank"
           rel="noopener noreferrer"
-          class={style.visitLink}
+          class={style["visit-link"]}
           aria-label="visit"
         >
           <i class="icon-new-tab" aria-hidden="true" />
@@ -44,7 +44,7 @@ const UriInputBox: FunctionalComponent = () => {
         <ActionButton
           label="visit"
           icon="icon-new-tab"
-          class={style.visitButton}
+          class={style["visit-button"]}
           disabled
         />
       )}
@@ -52,14 +52,14 @@ const UriInputBox: FunctionalComponent = () => {
         <ActionButton
           label="copy"
           icon="icon-copy"
-          class={style.copyButton}
+          class={style["copy-button"]}
           onClick={copy}
         />
       ) : (
         <ActionButton
           label="paste"
           icon="icon-clipboard"
-          class={style.copyButton}
+          class={style["copy-button"]}
           onClick={paste}
         />
       )}

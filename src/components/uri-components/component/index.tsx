@@ -28,7 +28,7 @@ const Component: FunctionalComponent<Props> = ({ type, value, children }) => {
   if (!value) return null;
   return (
     <div id={type} class={style.component}>
-      <div class={style.componentHeader}>
+      <div class={style["component-header"]}>
         <div
           class={style.type}
           style={{ background: `var(--color-component-${color})` }}
@@ -39,24 +39,24 @@ const Component: FunctionalComponent<Props> = ({ type, value, children }) => {
         <ActionButton
           label="copy"
           icon="icon-copy"
-          class={style.copyButton}
+          class={style["copy-button"]}
           onClick={copy}
         />
         {showNotification ? <CopyNotificator /> : null}
       </div>
       {children ? (
-        <div class={style.componentContent}>
+        <div class={style["component-content"]}>
           <div
-            class={`${style.componentDetail} ${
+            class={`${style["component-detail"]} ${
               expansion ? style.expansion : ""
             }`}
           >
-            <div class={style.componentDetailWrapper}>{children}</div>
+            <div class={style["component-detail-wrapper"]}>{children}</div>
           </div>
           <ActionButton
             label={expansion ? "collapse" : "expand"}
             icon={`icon-circle-${expansion ? "up" : "down"}`}
-            class={style.expandButton}
+            class={style["expand-button"]}
             onClick={toggleExpansion}
           />
         </div>

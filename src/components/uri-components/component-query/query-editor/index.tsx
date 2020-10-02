@@ -49,7 +49,7 @@ const QueryEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
           <ActionButton
             label="delete"
             icon="icon-cancel-circle"
-            class={style.removeButton}
+            class={style["remove-button"]}
             onClick={() => {
               if (!onInput) return;
               const newQuery = [
@@ -65,7 +65,7 @@ const QueryEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
         <ActionButton
           label="append"
           icon="icon-plus"
-          class={style.appendButton}
+          class={style["append-button"]}
           onClick={onAppend}
         />
       </div>

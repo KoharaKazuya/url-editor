@@ -15,7 +15,7 @@ const SortableList: FunctionalComponent<Props> = ({ onSort, children }) => {
         // eslint-disable-next-line react/jsx-key
         <div class={style.container}>
           <div
-            class={style.dragHandle}
+            class={style["drag-handle"]}
             onPointerDown={onPointerDown}
             aria-label="drag-handle"
           >

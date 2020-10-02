@@ -55,7 +55,7 @@ const PathEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
           >
             <InputText
               value={entry}
-              class={style.entryInput}
+              class={style["entry-input"]}
               onInput={(text) => {
                 const newEntries = [
                   ...entries.slice(0, index),
@@ -68,7 +68,7 @@ const PathEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
             <ActionButton
               label="delete"
               icon="icon-cancel-circle"
-              class={style.removeButton}
+              class={style["remove-button"]}
               onClick={() => {
                 const newEntries = [
                   ...entries.slice(0, index),
@@ -84,7 +84,7 @@ const PathEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
         <ActionButton
           label="append"
           icon="icon-plus"
-          class={style.appendButton}
+          class={style["append-button"]}
           onClick={onAppend}
         />
       </div>

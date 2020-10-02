@@ -17,20 +17,20 @@
     "uri-js": "^4.2.2"
   },
   "devDependencies": {
+    "@teamsupercell/typings-for-css-modules-loader": "^2.2.0",
     "@types/webpack-env": "^1.15.1",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
-    "css-loader": "^1.0.1",
+    "css-loader": "^3.5.3",
     "cypress": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "postcss-normalize": "^8.0.1",
-    "preact-cli": "^3.0.0-rc.10",
+    "preact-cli": "^3.0.3",
     "prettier": "^2.0.5",
-    "typescript": "^3.7.5",
-    "typings-for-css-modules-loader": "^1.7.0"
+    "typescript": "^3.7.5"
   },
   "eslintConfig": {
     "env": {
