@@ -79,7 +79,7 @@ function useExpansion(type: string) {
     const url = new URL(String(document.location));
     url.hash = newExpansion ? `#${type}` : "";
     history.replaceState(null, "", url.toString());
-  }, [expansion, setExpansion]);
+  }, [expansion, setExpansion, type]);
 
   return [expansion, toggleExpansion] as const;
 }
