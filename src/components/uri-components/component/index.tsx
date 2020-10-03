@@ -28,7 +28,7 @@ const Component: FunctionalComponent<Props> = ({ type, value, children }) => {
   if (!value) return null;
   return (
     <div id={type} class={style.component}>
-      <div class={style.componentHeader}>
+      <div class={style["component-header"]}>
         <div
           class={style.type}
           style={{ background: `var(--color-component-${color})` }}
@@ -38,25 +38,25 @@ const Component: FunctionalComponent<Props> = ({ type, value, children }) => {
         <div class={style.value}>{value}</div>
         <ActionButton
           label="copy"
-          icon="icon-copy"
-          class={style.copyButton}
+          icon="copy"
+          class={style["copy-button"]}
           onClick={copy}
         />
         {showNotification ? <CopyNotificator /> : null}
       </div>
       {children ? (
-        <div class={style.componentContent}>
+        <div class={style["component-content"]}>
           <div
-            class={`${style.componentDetail} ${
+            class={`${style["component-detail"]} ${
               expansion ? style.expansion : ""
             }`}
           >
-            <div class={style.componentDetailWrapper}>{children}</div>
+            <div class={style["component-detail-wrapper"]}>{children}</div>
           </div>
           <ActionButton
             label={expansion ? "collapse" : "expand"}
-            icon={`icon-circle-${expansion ? "up" : "down"}`}
-            class={style.expandButton}
+            icon={`circle-${expansion ? "up" : "down"}`}
+            class={style["expand-button"]}
             onClick={toggleExpansion}
           />
         </div>
@@ -79,7 +79,7 @@ function useExpansion(type: string) {
     const url = new URL(String(document.location));
     url.hash = newExpansion ? `#${type}` : "";
     history.replaceState(null, "", url.toString());
-  }, [expansion, setExpansion]);
+  }, [expansion, setExpansion, type]);
 
   return [expansion, toggleExpansion] as const;
 }

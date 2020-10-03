@@ -1,5 +1,6 @@
 import { FunctionalComponent, h, toChildArray } from "preact";
 import { useCallback } from "preact/hooks";
+import Icon from "../../../../icon";
 import * as style from "./style.css";
 
 type Props = {
@@ -15,11 +16,11 @@ const SortableList: FunctionalComponent<Props> = ({ onSort, children }) => {
         // eslint-disable-next-line react/jsx-key
         <div class={style.container}>
           <div
-            class={style.dragHandle}
+            class={style["drag-handle"]}
             onPointerDown={onPointerDown}
             aria-label="drag-handle"
           >
-            <i class="icon-menu2" aria-hidden="true" />
+            <Icon icon="menu2" size={16} />
           </div>
           <div class={style.item}>{item}</div>
         </div>

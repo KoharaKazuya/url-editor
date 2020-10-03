@@ -10,27 +10,32 @@
     "last 2 ios versions",
     "last 2 android versions"
   ],
+  "eslintIgnore": [
+    "build/*",
+    "src/**/*.css.d.ts"
+  ],
   "dependencies": {
-    "clipboard-polyfill": "^2.8.6",
+    "clipboard-polyfill": "^3.0.1",
     "preact": "^10.4.1",
     "preact-render-to-string": "^5.1.8",
     "uri-js": "^4.2.2"
   },
   "devDependencies": {
+    "@teamsupercell/typings-for-css-modules-loader": "^2.2.0",
     "@types/webpack-env": "^1.15.1",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
-    "css-loader": "^1.0.1",
-    "cypress": "^4.2.0",
+    "css-loader": "^3.5.3",
+    "cypress": "^5.3.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
-    "postcss-normalize": "^8.0.1",
-    "preact-cli": "^3.0.0-rc.10",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "postcss-normalize": "^9.0.0",
+    "preact-cli": "^3.0.3",
     "prettier": "^2.0.5",
-    "typescript": "^3.7.5",
-    "typings-for-css-modules-loader": "^1.7.0"
+    "typescript": "^3.7.5"
   },
   "eslintConfig": {
     "env": {
@@ -38,7 +43,9 @@
     },
     "extends": [
       "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
       "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking",
       "prettier/@typescript-eslint",
       "plugin:prettier/recommended"
     ],
@@ -47,8 +54,7 @@
       "ecmaFeatures": {
         "jsx": true
       },
-      "ecmaVersion": 2018,
-      "sourceType": "module"
+      "project": "./tsconfig.eslint.json"
     },
     "rules": {
       "@typescript-eslint/explicit-function-return-type": "off",
@@ -96,11 +102,11 @@
   "private": true,
   "scripts": {
     "build": "preact build",
-    "cy:open": "cypress open",
+    "cy:open": "preact build --no-sw && cypress open",
     "cy:run:chrome": "cypress run --headless --browser chrome",
     "cy:run:firefox": "cypress run --headless --browser firefox",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "start": "preact watch",
-    "test": "npm run cy:run:chrome && npm run cy:run:firefox"
+    "test": "preact build --no-sw && npm run cy:run:chrome && npm run cy:run:firefox"
   }
 }
