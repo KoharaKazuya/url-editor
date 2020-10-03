@@ -1,5 +1,6 @@
 import { Fragment, FunctionalComponent, h } from "preact";
 import { useCallback, useEffect } from "preact/hooks";
+import Icon from "../icon";
 import { useHasMounted } from "../prerender";
 import * as style from "./style.css";
 
@@ -11,7 +12,7 @@ const Header: FunctionalComponent = () => {
     <Fragment>
       {/* <Notificator /> オフラインで利用できることを通知する重要性がそんなに高くないので、UI の一等地に配置するほどではない */}
       <h1 class={style["site-title"]} onClick={onClick}>
-        <i class="icon-link" aria-hidden="true" />
+        <Icon icon="link" size={32} />
         <span class={style["site-title-text"]}>URL Editor</span>
       </h1>
     </Fragment>

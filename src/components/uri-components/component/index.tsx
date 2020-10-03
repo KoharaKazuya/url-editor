@@ -38,7 +38,7 @@ const Component: FunctionalComponent<Props> = ({ type, value, children }) => {
         <div class={style.value}>{value}</div>
         <ActionButton
           label="copy"
-          icon="icon-copy"
+          icon="copy"
           class={style["copy-button"]}
           onClick={copy}
         />
@@ -55,7 +55,7 @@ const Component: FunctionalComponent<Props> = ({ type, value, children }) => {
           </div>
           <ActionButton
             label={expansion ? "collapse" : "expand"}
-            icon={`icon-circle-${expansion ? "up" : "down"}`}
+            icon={`circle-${expansion ? "up" : "down"}`}
             class={style["expand-button"]}
             onClick={toggleExpansion}
           />

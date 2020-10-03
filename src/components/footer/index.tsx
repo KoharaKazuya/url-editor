@@ -1,4 +1,5 @@
 import { FunctionalComponent, h } from "preact";
+import Icon from "../icon";
 import * as style from "./style.css";
 
 const Footer: FunctionalComponent = () => (
@@ -21,7 +22,7 @@ export default Footer;
 function ExternalLink({ href, label }: { href: string; label: string }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" class={style.link}>
-      {label} <i class="icon-new-tab" aria-hidden="true" />
+      {label} <Icon icon="new-tab" size={16} />
     </a>
   );
 }

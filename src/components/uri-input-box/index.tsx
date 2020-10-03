@@ -7,6 +7,7 @@ import ContentEditable from "../content-editable";
 import { useUriContext } from "../context";
 import CopyNotificator from "../copy-notificator";
 import HighlightedUri from "../highlighted-uri";
+import Icon from "../icon";
 import { useHasMounted } from "../prerender";
 import * as style from "./style.css";
 
@@ -38,12 +39,12 @@ const UriInputBox: FunctionalComponent = () => {
           class={style["visit-link"]}
           aria-label="visit"
         >
-          <i class="icon-new-tab" aria-hidden="true" />
+          <Icon icon="new-tab" size={16} />
         </a>
       ) : (
         <ActionButton
           label="visit"
-          icon="icon-new-tab"
+          icon="new-tab"
           class={style["visit-button"]}
           disabled
         />
@@ -51,14 +52,14 @@ const UriInputBox: FunctionalComponent = () => {
       {!isPasteSupported || uri ? (
         <ActionButton
           label="copy"
-          icon="icon-copy"
+          icon="copy"
           class={style["copy-button"]}
           onClick={copy}
         />
       ) : (
         <ActionButton
           label="paste"
-          icon="icon-clipboard"
+          icon="clipboard"
           class={style["copy-button"]}
           onClick={paste}
         />

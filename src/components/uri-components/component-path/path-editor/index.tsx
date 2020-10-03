@@ -67,7 +67,7 @@ const PathEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
             />
             <ActionButton
               label="delete"
-              icon="icon-cancel-circle"
+              icon="cancel-circle"
               class={style["remove-button"]}
               onClick={() => {
                 const newEntries = [
@@ -83,7 +83,7 @@ const PathEditor: FunctionalComponent<Props> = ({ value, onInput }) => {
       <div>
         <ActionButton
           label="append"
-          icon="icon-plus"
+          icon="plus"
           class={style["append-button"]}
           onClick={onAppend}
         />

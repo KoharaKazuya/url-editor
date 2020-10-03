@@ -102,11 +102,11 @@
   "private": true,
   "scripts": {
     "build": "preact build",
-    "cy:open": "cypress open",
+    "cy:open": "preact build --no-sw && cypress open",
     "cy:run:chrome": "cypress run --headless --browser chrome",
     "cy:run:firefox": "cypress run --headless --browser firefox",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "start": "preact watch",
-    "test": "npm run cy:run:chrome && npm run cy:run:firefox"
+    "test": "preact build --no-sw && npm run cy:run:chrome && npm run cy:run:firefox"
   }
 }

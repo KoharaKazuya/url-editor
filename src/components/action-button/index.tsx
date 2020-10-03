@@ -1,4 +1,5 @@
 import { FunctionalComponent, h, JSX } from "preact";
+import Icon from "../icon";
 import * as style from "./style.css";
 
 type Props = {
@@ -23,7 +24,7 @@ const ActionButton: FunctionalComponent<Props> = ({
     onClick={onClick}
     disabled={disabled}
   >
-    <i class={icon} aria-hidden="true" />
+    <Icon icon={icon} size={16} />
   </button>
 );
 
