@@ -33,7 +33,7 @@
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^3.0.0",
     "postcss-normalize": "^9.0.0",
-    "preact-cli": "^3.0.3",
+    "preact-cli": "^3.5.1",
     "prettier": "^2.0.5",
     "typescript": "^3.7.5"
   },
